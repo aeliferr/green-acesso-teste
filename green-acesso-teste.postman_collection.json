@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "ef4364e4-bde5-40c7-85ac-1ae8f282190b",
+		"name": "green-acesso-teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31594212"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/ping",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "zLv66hudr/boletos.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/upload",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pdf-boletos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "5C-A8oSlQ/boletos_fake.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/boletos/pdf",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"boletos",
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "boletos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/boletos?nome=JOSE&valor_inicial=100&valor_final=200&id_lote=2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"boletos"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "JOSE"
+						},
+						{
+							"key": "valor_inicial",
+							"value": "100"
+						},
+						{
+							"key": "valor_final",
+							"value": "200"
+						},
+						{
+							"key": "id_lote",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:4000",
+			"type": "string"
+		}
+	]
+}
