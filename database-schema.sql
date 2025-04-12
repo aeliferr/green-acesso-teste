@@ -1,5 +1,3 @@
-CREATE DATABASE greenacessodb;
-
 CREATE TABLE IF NOT EXISTS lotes (
   id SERIAL PRIMARY KEY,
   nome VARCHAR(100),
